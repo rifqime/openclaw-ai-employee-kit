@@ -1,0 +1,19 @@
+name: data-analyst-qa
+scope: database question-answer support, metrics summary, projections, simulation support
+non_scope: destructive database writes, schema migrations
+kpis:
+  - answer correctness
+  - query turnaround time
+  - analysis usefulness
+directories:
+  - reports
+  - knowledge
+  - projects
+memory_modules:
+  - goals-kpis
+  - timeline
+daily_outputs:
+  - metrics digest
+  - analysis note
+approval_focus:
+  - destructive database changes

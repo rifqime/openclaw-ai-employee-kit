@@ -1,0 +1,43 @@
+title: FleetPack
+type: object
+required:
+  - name
+  - description
+  - roles
+  - rules
+properties:
+  name:
+    type: string
+  description:
+    type: string
+  roles:
+    type: array
+    items:
+      type: object
+      required:
+        - name
+        - rolePack
+        - ownership
+      properties:
+        name:
+          type: string
+        rolePack:
+          type: string
+        ownership:
+          type: string
+  rules:
+    type: array
+    items:
+      type: string
+  shared_systems:
+    type: array
+    items:
+      type: string
+  handoff_surfaces:
+    type: array
+    items:
+      type: string
+  shared_memory_files:
+    type: array
+    items:
+      type: string

@@ -1,0 +1,19 @@
+name: research-and-content-pod
+description: Small content intelligence pod combining research discovery with publishing support.
+roles:
+  - name: Research Analyst
+    rolePack: research-analyst
+    ownership: Owns scanning, synthesis, and durable signal interpretation.
+  - name: Marketing Support
+    rolePack: marketing-support
+    ownership: Owns turning approved insights into content and campaign inputs.
+rules:
+  - marketing uses research through explicit handoffs
+  - no public output without approval
+shared_systems:
+  - content calendar
+  - brand docs
+handoff_surfaces:
+  - memory/handoffs.md
+shared_memory_files:
+  - memory/competitors.md

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "paths": {
+      "@employee-kit/cli": ["packages/cli/src/index.ts"],
+      "@employee-kit/core": ["packages/core/src/index.ts"],
+      "@employee-kit/openclaw-runtime": ["packages/openclaw-runtime/src/index.ts"],
+      "@employee-kit/plugins": ["packages/plugins/src/index.ts"],
+      "@employee-kit/schemas": ["packages/schemas/src/index.ts"]
+    },
+    "types": ["node"],
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "dist"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "openclaw-ai-employee-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Toolkit for generating and hardening proactive OpenClaw AI employee vaults",
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "build": "corepack pnpm -r build",
+    "check": "corepack pnpm -r check",
+    "test": "corepack pnpm -r test",
+    "employee-kit": "node dist/cli/src/index.js",
+    "smoke": "rm -rf /tmp/openclaw-ai-employee-kit-smoke && corepack pnpm build && node dist/cli/src/index.js generate-vault --spec ./examples/single-agent-sales/agent.spec.yaml --out-dir /tmp/openclaw-ai-employee-kit-smoke/rudy-openclaw-vault && node dist/cli/src/index.js apply-role-pack --path /tmp/openclaw-ai-employee-kit-smoke/rudy-openclaw-vault --role marketing-support && node dist/cli/src/index.js apply-openclaw-hardening --path /tmp/openclaw-ai-employee-kit-smoke/rudy-openclaw-vault --profile standard-proactive && node dist/cli/src/index.js apply-fleet-pack --path /tmp/openclaw-ai-employee-kit-smoke/rudy-openclaw-vault --fleet small-startup-core && node dist/cli/src/index.js validate-vault --path /tmp/openclaw-ai-employee-kit-smoke/rudy-openclaw-vault && node dist/cli/src/index.js package-zip --path /tmp/openclaw-ai-employee-kit-smoke/rudy-openclaw-vault --out /tmp/openclaw-ai-employee-kit-smoke/rudy-openclaw-vault.zip"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "yaml": "^2.8.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.2"
+  }
+}

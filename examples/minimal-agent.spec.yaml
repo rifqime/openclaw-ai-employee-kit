@@ -1,0 +1,16 @@
+agentName: New Agent
+agentSlug: new-agent
+companyName: Your Company
+role: role-specialized AI employee
+primaryGoal: Define a measurable business goal.
+managerRole: Founder or operator
+secondaryGoals: []
+successDefinition: Measurable contribution to the assigned business goal.
+proactive: true
+externalWebAccess: true
+browserAccess: false
+computerAccess: false
+activeChannels: []
+rolePack: sales-support
+hardeningProfile: standard-proactive
+fleetMode: single-agent

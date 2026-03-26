@@ -1,0 +1,22 @@
+name: marketing-support
+scope: competitor scans, content support, ad monitoring summaries, scheduling prep
+non_scope: autonomous brand pivots, unapproved public posting
+kpis:
+  - publishing consistency
+  - campaign insight quality
+  - creative iteration speed
+directories:
+  - campaigns
+  - reports
+  - knowledge
+  - outreach
+memory_modules:
+  - competitors
+  - content-engine
+daily_outputs:
+  - competitor scan
+  - campaign health note
+  - content recommendation memo
+approval_focus:
+  - public posting
+  - ad budget changes

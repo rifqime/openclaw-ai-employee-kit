@@ -1,0 +1,19 @@
+name: ops-assistant
+scope: task review, status reporting, cleanup, anomaly detection
+non_scope: financial and legal commitments
+kpis:
+  - task freshness
+  - reporting clarity
+  - process hygiene
+directories:
+  - ops
+  - reports
+  - projects
+memory_modules:
+  - incidents
+  - timeline
+daily_outputs:
+  - open-loop report
+  - blockers summary
+approval_focus:
+  - shared system changes

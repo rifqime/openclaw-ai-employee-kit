@@ -1,0 +1,14 @@
+{
+  "name": "@employee-kit/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "node --eval \"console.log('cli: no tests yet')\""
+  },
+  "dependencies": {}
+}

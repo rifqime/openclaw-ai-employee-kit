@@ -1,0 +1,29 @@
+name: small-startup-core
+description: Small startup fleet with narrow specialists for GTM, research, and operational hygiene.
+roles:
+  - name: Sales Support
+    rolePack: sales-support
+    ownership: Owns qualified pipeline support, follow-up hygiene, and meeting prep.
+  - name: Marketing Support
+    rolePack: marketing-support
+    ownership: Owns competitor scans, content support, and campaign observation.
+  - name: Research Analyst
+    rolePack: research-analyst
+    ownership: Owns market sensing, synthesis, and structured insight memos.
+  - name: Ops Assistant
+    rolePack: ops-assistant
+    ownership: Owns open-loop visibility, status hygiene, and process anomaly reporting.
+rules:
+  - explicit handoffs
+  - no duplicate ownership
+  - shared systems listed centrally
+shared_systems:
+  - CRM
+  - shared docs
+  - approved messaging channels
+handoff_surfaces:
+  - memory/handoffs.md
+  - fleet/roster.md
+shared_memory_files:
+  - memory/goals-kpis.md
+  - memory/timeline.md

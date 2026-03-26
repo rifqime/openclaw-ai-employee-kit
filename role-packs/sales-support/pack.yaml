@@ -1,0 +1,24 @@
+name: sales-support
+scope: lead research, pipeline hygiene, outreach drafting, meeting prep, proposal support
+non_scope: autonomous closing, pricing commitments, legal commitments
+kpis:
+  - qualified opportunities
+  - response freshness
+  - proposal readiness
+directories:
+  - crm
+  - pipelines
+  - outreach
+  - reports
+  - knowledge
+memory_modules:
+  - opportunities
+  - network
+  - customers
+daily_outputs:
+  - morning commercial brief
+  - stale follow-up list
+  - opportunity scan
+approval_focus:
+  - external outreach send
+  - pricing or commitment language

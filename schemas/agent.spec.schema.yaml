@@ -1,0 +1,55 @@
+title: AgentSpec
+type: object
+required:
+  - agentName
+  - agentSlug
+  - companyName
+  - role
+  - primaryGoal
+  - managerRole
+  - proactive
+  - rolePack
+  - hardeningProfile
+  - fleetMode
+properties:
+  agentName:
+    type: string
+  agentSlug:
+    type: string
+  companyName:
+    type: string
+  role:
+    type: string
+  primaryGoal:
+    type: string
+  managerRole:
+    type: string
+  secondaryGoals:
+    type: array
+    items:
+      type: string
+  successDefinition:
+    type: string
+  proactive:
+    type: boolean
+  externalWebAccess:
+    type: boolean
+  browserAccess:
+    type: boolean
+  computerAccess:
+    type: boolean
+  activeChannels:
+    type: array
+    items:
+      type: string
+  rolePack:
+    type: string
+  hardeningProfile:
+    type: string
+  fleetMode:
+    type: string
+    enum:
+      - single-agent
+      - fleet
+  fleetPack:
+    type: string

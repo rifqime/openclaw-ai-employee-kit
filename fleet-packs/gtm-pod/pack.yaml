@@ -1,0 +1,22 @@
+name: gtm-pod
+description: Lean GTM pod for demand sensing, positioning support, and outreach preparation.
+roles:
+  - name: Sales Support
+    rolePack: sales-support
+    ownership: Owns outreach prep, pipeline follow-ups, and proposal coordination.
+  - name: Marketing Support
+    rolePack: marketing-support
+    ownership: Owns campaign insights, content support, and competitor monitoring.
+  - name: Research Analyst
+    rolePack: research-analyst
+    ownership: Owns insight generation, ICP refinement, and external signal scanning.
+rules:
+  - no overlap between sales and marketing execution
+  - use research outputs through explicit handoffs
+shared_systems:
+  - CRM
+  - content calendar
+handoff_surfaces:
+  - memory/handoffs.md
+shared_memory_files:
+  - memory/goals-kpis.md

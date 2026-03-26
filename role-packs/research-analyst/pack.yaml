@@ -1,0 +1,19 @@
+name: research-analyst
+scope: daily signal scan, synthesis briefs, market research, hypothesis generation
+non_scope: external publication without approval
+kpis:
+  - brief usefulness
+  - speed to insight
+  - research reuse
+directories:
+  - knowledge
+  - reports
+  - projects
+memory_modules:
+  - opportunities
+  - competitors
+daily_outputs:
+  - daily signal scan
+  - synthesis brief
+approval_focus:
+  - external publication
