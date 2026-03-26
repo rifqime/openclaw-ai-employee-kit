@@ -1,5 +1,7 @@
 # OpenClaw AI Employee Kit
 
+Role-scoped OpenClaw agents for real business work.
+
 This repo came out of a setup that kept failing.
 
 I originally tried to run one OpenClaw agent as a general-purpose operator. It had too much context, too many tools, too many skills, and too many unrelated jobs. On paper that looked efficient. In practice it was unreliable: wrong tool calls, wrong skill calls, missed scheduled work, weak follow-through, and too much fake confidence.
@@ -9,6 +11,20 @@ What worked better for me was to stop building one super-agent and start buildin
 The second thing that mattered was treating the agent more like an employee than a chatbot. If the role needs it, the agent should have a real inbox, a real browser profile, access to the actual tools for the job, and a clear manager. Once I started thinking about the setup that way, the whole system got easier to reason about.
 
 That is what this repo is for.
+
+## Who this is for
+
+- people using OpenClaw who feel one big agent is getting messy
+- operators who want narrower agents with clearer responsibilities
+- teams that want agents to work through real inboxes, dashboards, and internal tools
+- people who are comfortable with an opinionated setup, not a neutral framework
+
+## Who this is not for
+
+- people looking for a hosted product
+- people expecting public benchmarks or polished case studies
+- people who want one general-purpose agent to run everything
+- people who want the safest possible default for every use case
 
 ## What this repo does
 
@@ -21,6 +37,9 @@ It helps you generate and harden role-specific OpenClaw agents with:
 - validation and zip packaging
 
 It also supports a simpler flow where another agent can read this repo, ask setup questions, and generate the workspace for you.
+
+This is an opinionated setup kit, not a public proof-of-results repo.
+It shares the operating pattern, not private company internals, prompts, or results.
 
 ## The opinion behind it
 
@@ -78,6 +97,13 @@ Then define the setup around that role:
 - what it should escalate
 
 If that role works, add another agent. Do not keep bloating the first one.
+
+## Example roles
+
+- Marketing support: competitor scan, content research, draft generation, campaign notes, scheduling reminders
+- Research analyst: recurring market scan, synthesis, citation-first notes, internal brief preparation
+- Ops assistant: follow-up queue maintenance, task reminders, status receipts, lightweight coordination work
+- Sales support: prospect research, inbox prep, CRM hygiene, outreach drafts, meeting preparation
 
 ## Real operating surfaces matter
 
@@ -138,6 +164,32 @@ Give this repo to another AI agent together with:
 - [`questions/AGENT_SETUP_QUESTIONNAIRE.md`](./questions/AGENT_SETUP_QUESTIONNAIRE.md)
 
 That setup operator should read the repo, ask the user the right questions, generate the spec, generate the vault, validate it, and package the result.
+
+## Example generated output
+
+```text
+generated/
+  marketing-support-openclaw-vault/
+    AGENTS.md
+    SOUL.md
+    USER.md
+    MISSION.md
+    MEMORY.md
+    HEARTBEAT.md
+    ROLE_CONTEXT.md
+    RUNTIME_REQUIREMENTS.md
+    openclaw.example.json5
+    memory/
+      goals-kpis.md
+      action-receipts.md
+      reflections.md
+    templates/
+      action-receipt.md
+      memory-reflection.md
+    agent/
+      agent-spec.yaml
+      runtime-profile.yaml
+```
 
 ## What is implemented right now
 
