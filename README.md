@@ -2,7 +2,7 @@
 
 I built this because my "super agent" kept failing in the most annoying ways.
 
-I kept giving one agent too many jobs at once: coding, research, marketing, design, operations, outreach. I gave it more context, more tools, more skills, more instructions. It looked powerful on paper.
+I kept trying to make one OpenClaw agent do everything: coding, research, marketing, design, operations, outreach. I gave it more context, more tools, more skills, more instructions. It looked impressive on paper.
 
 In practice, it kept breaking down:
 
@@ -16,7 +16,7 @@ In practice, it kept breaking down:
 
 The problem was not that the model was useless. The problem was the shape.
 
-What worked better was much simpler:
+What started working for me was much simpler:
 
 - split the work into narrower agents
 - give each one a real role
@@ -25,6 +25,29 @@ What worked better was much simpler:
 - define clear approval boundaries
 - make them proactive on a schedule
 - make them write memory and receipts so they do not "feel" productive while doing nothing
+
+But the bigger shift was this:
+
+I stopped treating them like floating assistants.
+
+I started treating them more like employees.
+
+That means each agent can have:
+
+- its own role and target
+- its own inbox or email account
+- its own browser profile already logged into the tools it needs
+- its own social or messaging surface if the job needs it
+- its own memory
+- its own manager
+- its own reporting rhythm
+- its own approval boundary
+
+That is the opinionated part of this repo.
+
+I think AI employees work better when you give them employee-shaped reality.
+
+Not just a prompt. Not just a pile of tools. Not just a giant memory file.
 
 This repo is the system I wanted when I was trying to make that shift.
 
@@ -58,7 +81,7 @@ It also includes a simpler path for people who do not want to hand-edit specs:
 
 ## Why this needs to exist
 
-Most agent setups are still too vague.
+Most agent setups are still too vague, too ambitious, or too detached from how real work actually happens.
 
 They define a personality and a goal, then hope the runtime will do the rest.
 
@@ -73,8 +96,34 @@ If you want an agent to behave more like an employee, you need more than a syste
 - action receipts
 - reflection
 - handoffs if multiple agents are involved
+- real accounts and real operating surfaces when the role needs them
+- clear rules for private context, shared context, and channel-specific behavior
 
 This repo is opinionated about that.
+
+## My current opinion
+
+If you want an AI employee to actually become useful, give it a job that looks like a real job.
+
+That usually means:
+
+- a real email account
+- a real browser profile
+- access to the real tools for that role
+- a real reporting line
+- a real KPI
+- a real channel where people can reach it
+- memory that survives day to day
+
+If the role is internal, that could mean Slack, Discord, WhatsApp, Telegram, email, Notion, Linear, HubSpot, Meta Ads Manager, Google Ads, or your own internal tools.
+
+If the role is external, that could mean a sales inbox, a LinkedIn account, a WhatsApp number, or a customer support channel.
+
+I know that is risky. I know some people will hate that framing. That is fine.
+
+This repo is not trying to be the most conservative answer. It is my current answer to a practical problem:
+
+How do I make AI agents actually useful inside a company without pretending one giant super-agent will somehow do everything well?
 
 ## The core idea
 
@@ -91,6 +140,14 @@ Start with a narrow role:
 Then harden that role until it is dependable.
 
 If you need more coverage, add another narrow agent instead of bloating the first one.
+
+Then give each agent the operating surfaces that match that role.
+
+For example:
+
+- a marketer support agent should be able to read ad dashboards, competitor pages, and posting calendars
+- a sales support agent should have a real inbox, a CRM surface, and a browser profile for research and outreach prep
+- a data support agent should be able to answer in team chats, read your data layer, and keep useful analytical memory over time
 
 ## Two ways to use it
 
@@ -117,6 +174,60 @@ That setup operator should:
 - package the zip
 
 This is the easier path if you just want the repo to behave like a setup system.
+
+## What I think makes this work
+
+There are four things I trust more now than I did when I started:
+
+1. Narrow roles beat super-agents.
+2. Real accounts beat abstract tool access.
+3. Memory needs to be structured, not just long.
+4. Human-in-the-loop is still the right move for high-stakes actions.
+
+The agent can do a lot on its own:
+
+- monitor
+- research
+- summarize
+- draft
+- follow up
+- prepare
+- maintain memory
+- surface opportunities
+- keep moving on a schedule
+
+But I still want humans on the hook for:
+
+- irreversible actions
+- sensitive outreach
+- public reputation
+- legal or financial decisions
+- major strategic changes
+
+That is not a weakness in the model. That is just sane operations.
+
+## Private vs shared context matters
+
+One thing I care about a lot now is not just "memory", but memory partitions.
+
+An agent should be able to keep:
+
+- core role memory
+- company memory
+- relationship memory
+- private DM memory
+- group or channel memory
+- handoff memory
+
+And those should not all bleed together blindly.
+
+If an agent talks to one person privately, that context should not automatically become group truth.
+
+If a decision happens in a team channel, that may need to be promoted into shared memory.
+
+If a lead says something in one thread, that should stay relationship-specific unless it becomes broadly useful.
+
+This matters a lot once the agent has a real inbox, a real chat surface, and real responsibility.
 
 ## What is implemented right now
 
@@ -212,6 +323,7 @@ Not model self-modification.
 
 ## Core docs
 
+- [AI Employee Operating Model](./docs/AI_EMPLOYEE_OPERATING_MODEL.md)
 - [Simple Mode](./docs/SIMPLE_MODE.md)
 - [Repo Blueprint](./docs/REPO_BLUEPRINT.md)
 - [Universal Agent Zip Factory](./docs/UNIVERSAL_OPENCLAW_AGENT_ZIP_FACTORY_BRIEF.md)
