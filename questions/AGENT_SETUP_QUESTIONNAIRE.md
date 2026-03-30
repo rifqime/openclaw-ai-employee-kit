@@ -18,6 +18,9 @@ Use this questionnaire when creating a new AI employee spec.
 12. Is this a single agent or part of a fleet?
 13. If fleet mode is enabled, which fleet pack applies?
 14. Which hardening profile should be used?
+15. If WhatsApp is enabled, which numbers are allowed to trigger live replies?
+16. If WhatsApp is enabled, should the agent stay silent to non-whitelisted numbers?
+17. If WhatsApp is enabled, should non-whitelisted outbound outreach be allowed through a separate explicit workflow?
 
 ## Optional questions
 
@@ -34,3 +37,4 @@ Use this questionnaire when creating a new AI employee spec.
 - fleet mode: `single-agent`
 - hardening profile: `standard-proactive`
 - role pack: choose the narrowest one that matches the role
+- WhatsApp default: owner-only live replies, silent outsiders, and separate manual outreach if needed

@@ -72,6 +72,48 @@ Every serious setup should define:
 
 This is not just a brand question. It affects safety, memory, trust, and escalation.
 
+## WhatsApp needs an explicit operating pattern
+
+WhatsApp is one of the easiest places to create a messy agent.
+
+The failure mode usually looks like this:
+
+- the agent can read and reply to everyone by default
+- owner and outsider conversations blur together
+- outbound outreach is blocked by the same allowlist that protects owner-only live replies
+- the agent starts behaving like a chatbot when the real need is a managed communication assistant
+
+For most serious setups, decide between these modes up front:
+
+### Mode A: owner-only live assistant
+
+The agent may run live LLM conversations only with:
+
+- the owner
+- the agent's own linked number for self-chat/testing
+
+Everyone else stays silent by default.
+
+### Mode B: public chatbot
+
+The agent can reply to anyone in the allowed scope.
+
+Only use this when you truly want a chatbot.
+
+If you want this combined behavior:
+
+- owner-only live replies
+- outsider chats visible as an operating surface
+- manual outbound send to non-whitelisted numbers
+
+then use a split design:
+
+- keep normal live WhatsApp mode owner-only
+- keep the default channel allowlist restricted to owner + self
+- use a separate explicit outreach workflow for non-owner outbound sends
+
+See [`WHATSAPP_OWNER_GATED_OUTREACH_PATTERN.md`](./WHATSAPP_OWNER_GATED_OUTREACH_PATTERN.md).
+
 ## Memory needs structure
 
 I do not think "save everything" is a good memory strategy.

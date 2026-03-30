@@ -57,6 +57,8 @@ Before generation, you must know:
 - whether browser/computer access is expected
 - whether external web access is expected
 - what channels the agent may operate on
+- if WhatsApp is enabled, which numbers may trigger live replies
+- if WhatsApp is enabled, whether non-owner outbound outreach should exist as a separate manual path
 
 If the user cannot answer everything, choose safe defaults and state them clearly.
 
@@ -88,3 +90,11 @@ Always remind the user that the generated vault does not include:
 - real secrets
 - real account bindings
 - final approval-sensitive policy decisions unless explicitly provided
+
+If WhatsApp is part of the role, do not stop at "enable WhatsApp." You must also capture:
+
+- owner number
+- self/test number if applicable
+- whether outsider DMs should stay silent
+- whether outsider messages still need summarization
+- whether manual outreach to non-whitelisted numbers needs a separate skill or wrapper path

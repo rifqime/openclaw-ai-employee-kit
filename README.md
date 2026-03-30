@@ -119,6 +119,15 @@ Examples:
 
 If the role works through email, give it email. If the role works through WhatsApp, Discord, or Slack, design for that. If the role needs a LinkedIn or X account, that should be part of the operating model, not an afterthought.
 
+For WhatsApp-heavy roles, do not stop at "enable the channel." Define:
+
+- who may trigger live OpenClaw replies
+- who should stay silent by default
+- whether outbound sends are limited to the allowlist or opened through a separate outreach workflow
+- whether the agent owns a dedicated WhatsApp number
+
+If you want the owner-only plus controlled-outreach pattern that held up best in practice, see [`docs/WHATSAPP_OWNER_GATED_OUTREACH_PATTERN.md`](./docs/WHATSAPP_OWNER_GATED_OUTREACH_PATTERN.md).
+
 ## Memory should not be one big bucket
 
 Once an agent works across real channels, memory gets more important and also more dangerous.
